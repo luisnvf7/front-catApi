@@ -1,0 +1,85 @@
+.cats-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Tamaño de las columnas */
+.cats-content img {
+    flex: 1 1 22%;
+    padding-bottom: 10px;
+}
+
+/* Evitar el padding-right de todos los gatos que estan en toda la derecha. */
+.cats-content img:not(:nth-child(4n+5)) {
+    padding-right: 10px;
+}
+
+.cat-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.isLoading {
+    animation: rotation 3s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading-container-category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cat-grid img {
+  margin-top: 12px;
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters-container div {
+  width: 300px;
+}
+
+.filters-container div select {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .filters-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-filter {
+    display: flex;
+    justify-content: center;
+  }
+}

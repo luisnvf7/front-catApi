@@ -1,0 +1,9 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+.pagination-container div {
+    border: 1px solid gray;
+}
